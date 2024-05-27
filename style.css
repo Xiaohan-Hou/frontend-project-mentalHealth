@@ -1,0 +1,924 @@
+
+/*-----Importing fonts-----*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/*-----START: COMMON PART-----*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+/*For response design*/
+.max-width
+{
+    max-width: 1300px;
+    padding: 0 90px;
+    margin: 0 auto;
+}
+
+/*----Common text sizes----*/
+.hero-text
+{
+    font-size: 3em;
+}
+    
+h1
+{
+    font-size: 2em;
+}
+
+h2
+{
+    font-size: 1.5em;
+}
+
+h3, .navbar-right li a
+{
+    font-size: 1.17em;
+}
+
+/*Website logo*/
+.logo-container a p
+{
+    font-size: 1.75em;
+}
+
+.disclaimer, #confidentiality-text, footer
+{
+    font-size: 0.83em;
+}
+
+/*----Common layouts----*/
+/*Flex layout*/
+header .max-width, .logo-container a, .nav-link, footer,.hero-image, .mission-container, .mission-number-container
+,.mission-number, .importance-container, .importance-image-container, .issues-content-container, 
+.share-content-container, .share-image-container, .share-button, .way-container, .way-image-container
+,.user-container, .user-image-box, .user-text
+{
+    display: flex;
+}
+
+/*Grid Layout*/
+.circle-nav-wrapper, .issues-master-container, .other-way-container, #voice-master-container
+{
+    display: grid;
+}
+
+/*Justify content: space-between*/
+header .max-width, .importance-container
+{
+    justify-content: space-between;
+}
+
+/*Justify content: center*/
+footer, .nav-link, .hero-image, .mission-number-container, .mission-number, .importance-image-container
+, .share-image-container, .way-image-container, .user-image-box
+{
+    justify-content: center;
+}
+
+/*Align-items: center*/
+header .max-width,.logo-container a, footer, .hero-image, .mission-number-container, .mission-number
+, .importance-image-container, .share-image-container, .user-image-box, .user-text
+{
+    align-items: center;
+}
+
+/*----Common text style----*/
+/*Center*/
+h1, h2, .nav-link, .hero-text,.introduction-text,.bottom-text, .circle-container p, .page-intro-text, .page-bottom-text,
+.page-sub-intro-text, .way-content-container, .voice-title, .footer-content
+{
+    text-align: center;
+}
+
+/*Font weight*/
+.hero-text, .nav-link, .circle-container p, .mission-number, .share-button a, #sub-button
+{
+    font-weight: bold;
+}
+
+/*Font family for titles*/
+h1, h2, h3, .logo-container a p, .navbar-right li a, .hero-text, .circle-container p
+{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/*----Common Color----*/
+/*Font color*/
+h3, .logo-container a p, .highlight,.nav-link, .navbar-right li a:hover, #page-active, .circle-container:hover, .navbar-right li a.current
+{
+    color:rgba(10, 82, 92, 0.979);
+}
+
+footer, .hero-image, .mission-number, .share-button a, #sub-button
+{
+    color: white;
+}
+
+/*Background color*/
+footer,.mission-number, .share-button a, #sub-button
+{
+    background-color: rgba(10, 82, 92);
+}
+
+/*----Header----*/
+header
+{
+    background-color: white;
+    padding: 20px 0;
+    width:100%;
+}
+
+.logo-container
+{
+    margin-right: 20px;
+}
+
+/*The announcement image*/
+.logo-image
+{
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 10px;
+}
+
+/*Right navigation items*/
+.navbar-right li
+{
+    display: inline-block;
+}
+
+/*Right navigation hyperlinks*/
+.navbar-right li a 
+{
+    color: inherit;
+    margin-left: 25px;
+}
+
+/*home button not displaying originally*/
+#home-nav-right
+{
+    display: none;
+}
+
+/*Button prepared for responsive design*/
+.menu-btn
+{
+    color: black;
+    font-size: 1.4em;
+    cursor: pointer;
+    display: none;
+}
+
+/*----Bottom Part----*/
+.nav-link
+{
+    text-decoration: underline;
+}
+
+/*----Footer----*/
+footer
+{
+    flex-direction: column;
+}
+
+/*Footer content box*/
+.footer-content
+{
+    padding: 10px 50px;
+}
+
+/*Footer text*/
+.disclaimer
+{
+    margin-top: 5px;
+}
+
+/*----Common structure----*/
+.page-intro-text
+{
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.page-sub-intro-text
+{
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.page-bottom-text
+{
+    margin: 20px 0;
+}
+
+/*margin-bottom: 10px*/
+.importance-title, .way-container p, .voice-title, .input-content, .user-container, .page-title
+{
+    margin-bottom: 10px;
+}
+
+/*-----END: COMMON PART-----*/
+
+/*-----HOME PAGE-----*/
+.hero-image
+{
+    background: url("Img/home/hero-image.png") no-repeat center;
+    height: 60vh;
+    z-index: 999;
+    min-height: 300px;
+}
+
+.hero-text
+{
+    padding: 0 20px;
+}
+
+#homepage-title
+{
+    margin: 15px 0;
+}
+
+.introduction-text,.bottom-text
+{
+    padding: 0 80px;
+    margin-bottom: 30px;
+}
+
+/*Four navigation circles*/
+.circle-nav-wrapper
+{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*Center the image to the grid box*/
+.circle-container
+{
+    color: black;
+    justify-self: center;
+    align-self: center;
+}
+
+.circle-nav-image
+{
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    opacity: 0.9;
+}
+
+/*For toggling effect*/
+.full-opacity
+{ 
+    opacity: 1.0;
+}
+
+/*Text under the navigation circle*/
+.circle-container p
+{
+    margin-top: px;
+}
+
+.bottom-text
+{
+    padding: 0 100px;
+    margin-top: 30px;
+}
+
+/*Bottom navigation section*/
+.bottom-nav
+{
+    margin-bottom: 30px;
+}
+
+/*-----ABOUT US PAGE-----*/
+.about-intro-subtitle,.about-mission-subtitle,.about-care-subtitle
+{
+    margin-bottom: 15px;
+}
+
+.about-intro-section,.about-mission-section,.about-care-section
+{
+    padding: 0 80px;
+    margin-bottom: 30px;
+}
+
+.mission-container
+{
+    margin-bottom:25px;
+}
+
+.mission-number-container{
+    margin-right: 10px;
+}
+
+.mission-number
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/*-----IMPORTANCE PAGE-----*/
+.importance-container{
+    flex-direction: row-reverse;
+    margin-bottom:30px;
+}
+
+/*Overriding row-reverse for Z pattern*/
+#importance-container-2
+{
+    flex-direction: row;
+}
+
+.importance-image-container
+{
+    margin-left: 20px;
+}
+
+/*Overriding margin*/
+#importance-image-2
+{
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+.importance-image-container img
+{
+    width: 300px;
+    height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.importance-first-paragraph
+{
+    margin-bottom:15px;
+}
+
+/*-----BARRIERS PAGE------*/
+.issues-master-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+}
+
+.issue-image
+{
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    margin-right: 10px;
+}
+
+/*-----HOW YOU CAN HELP PAGE------*/
+.share-wrapper
+{
+    margin-bottom: 30px;
+}
+
+.share-content-container
+{
+    margin-top: 10px;
+}
+
+.share-image-container
+{
+    margin-right: 15px;
+}
+
+.share-image-container img
+{
+   width: 300px;
+   height: 300px;
+   min-width: 300px;
+   min-height: 300px;
+}
+
+.share-text
+{
+    margin-bottom: 8px;
+}
+
+.share-button
+{
+    justify-content: end;
+    -webkit-justify-content: flex-end;
+    margin-top: 20px;
+    opacity: 0.95;
+}
+
+/*Prepared for jQuery*/
+.share-button.active 
+{
+    opacity: 1.0;
+}
+
+.share-button a
+{
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.other-way-container
+{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 20px;
+}
+
+.way-container
+{
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.way-container img
+{
+    width: 300px;
+    height: 200px;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.way-content-container h3
+{
+    margin: 8px 0;
+}
+
+/*-----Share Your Voice Page-----*/
+#voice-master-container
+{
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/*Left information form*/
+input,textarea
+{
+    display: block;
+    width: 100%;
+}
+
+input
+{
+    height: 4vh;
+    min-height: 30px;
+}
+
+textarea
+{
+    height: 70vh;
+}
+
+.submit-button
+{
+    opacity: 0.95;
+}
+
+.submit-button.active 
+{
+    opacity: 1.0;
+}
+
+#sub-button
+{
+    border: 0;
+    border-radius: 5px;
+    height: 35px;
+    min-height: 35px;
+    line-height: 35px;
+}
+
+#confidentiality-text
+{
+    margin: 10px 0 20px 0;
+    line-height:normal;
+    color:grey;
+}
+
+/*Right demo section*/
+
+.user-image-box img
+{
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.user-container-2,.user-container-4
+{
+    flex-direction: row-reverse;
+}
+
+.user-text
+{
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.user-text-2, .user-text-4
+{
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/*-----RESPONSIVE DESIGN START-----*/
+/*-----Breaking Point 1-----*/
+@media (max-width: 1217px)
+{
+    /*----Barriers Page----*/
+    .issues-master-container
+    {
+        display: block;
+    }
+
+    /*Change margin to make the space look nicer*/
+    .issues-content-container
+    {
+        margin-bottom: 40px;
+    }
+}
+
+/*-----Breaking Point 2-----*/
+@media (max-width: 1055px)
+{
+    /*----Breaking point 2: Common parts----*/
+    /*Text size changes: 80%*/
+    .hero-text
+    {
+        font-size: 2.4em;
+    }
+
+    /*Website logo*/
+    .logo-container a p
+    {
+        font-size: 1.4em;
+    }
+
+    .max-width
+    {
+        padding: 0 60px;
+    }
+
+    /*Color change because of the green navigation background*/
+    .navbar-right li a, .menu-btn i.active:before, .navbar-right li a.current
+    {
+        color: white;
+    }
+
+    .navbar-right li a.current
+    {
+        text-decoration: underline;
+    }
+
+    /*show previously hidden menu button*/
+    /*make right top navbar layed out vertically*/
+    /*home button hidden until this point*/
+    /*importance-container + issues container no longer need flex layout*/
+    /*share - cancel flex*/
+    /*other-way-container - cancel grid*/
+    .menu-btn,.navbar-right li, #home-nav-right, .importance-container, .share-content-container, .other-way-container
+    ,#voice-master-container
+    {
+        display: block;
+    }
+
+    /*----Header section----*/
+    .menu-btn
+    {
+        z-index: 999;
+    }
+
+    /*Turn the navigation to bar to occupy the whole page*/
+    .navbar-right
+    {
+        position:fixed;
+        height:100vh;
+        width:100%;
+        left:-100%;
+        top:0;
+        background-color: rgb(10, 82, 92);
+        text-align:center;
+        padding-top: 30px;
+    }
+
+    /*Position the whole-page navigation*/
+    .navbar-right.active
+    {
+        left:0;
+    }
+
+    /*when the whole-page navigation shows the header should be fixed to make sure the close
+    button does not move*/
+    header.fixed
+    {
+        position:fixed;
+    }
+
+    /*The text inside the buttons*/
+    .navbar-right li a
+    {
+        display:inline-block;
+        margin: 20px 0;
+    }
+
+    /*Hover effect for the whole-page navigation*/
+    .navbar-right li a:hover
+    {
+        color: white;
+        text-decoration: underline;
+    }
+
+    /*Icon turned into the close button*/
+    .menu-btn i.active:before
+    {
+        content:"\f00d";
+    }
+
+    /*----Home Page----*/
+    /*change padding to make the space look nicer*/
+    .introduction-text,.bottom-text
+    {
+        padding: 0 40px;
+    }
+
+    /*----About Us Page----*/
+    /*Change padding to make the space look nicer*/
+    .about-intro-section,.about-mission-section,.about-care-section
+    {
+        padding: 0 20px;
+    }
+
+    /*----Importance Page----*/
+    /*Flow layout*/
+    .importance-container
+    {
+        overflow: hidden;
+    }
+
+    /*The first and third section - Left = text, Right = image*/
+    .importance-image-container
+    {
+        float: right;
+        margin-left: 20px;
+    }
+
+    /*The second section - Left = image, Right = text*/
+    #importance-image-2
+    {
+        float: left;
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+
+    /*Change margin to make the space look nicer*/
+    .share-image-container
+    {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    /*Center the button when changing to vertical layout*/
+    .share-button
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*-----Breaking Point 3-----*/
+@media (max-width: 920px)
+{
+    /*----Home Page----*/
+    /*Circles = 2 row + 2 columns*/
+    .circle-nav-wrapper
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 20px;
+    }
+
+    /*---About Us Page---*/
+    /*remove flex layout*/
+    .mission-container
+    {
+        display: block;
+    }
+
+    .mission-title
+    {
+        margin-bottom: 3px;
+    }
+
+    /*Adjust the numbers with green circle*/
+    .mission-number-container
+    {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /*---Importance Page---*/
+    /*Remove flex layout to change to vertical layout*/
+    .importance-container
+    {
+        display: block;
+        margin-bottom: 60px;
+    }
+
+    /*Cancel flow as they are now laying out horizontally*/
+    .importance-image-container, #importance-image-2
+    {
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    /*Cancel margin-left/right set for previous layout*/
+    .importance-image-container
+    {
+        margin-left: 0;
+    }
+
+    #importance-image-2
+    {
+        margin-right:0;
+    }
+
+    /*---How you can help page---*/
+    /*change padding to make the space look nicer*/
+    .other-way-container
+    {
+        padding: 0 20px;
+    }
+
+}
+
+/*-----Breaking Point 4-----*/
+@media (max-width: 600px)
+{
+    /*----Breaking point 4: Common parts----*/
+    /*Text size changes: 75%*/
+    .hero-text
+    {
+        font-size: 2.25em;
+    }
+
+    h1
+    {
+        font-size: 1.5em;
+    }
+
+    h2
+    {
+        font-size:1.125em;
+    }
+
+    h3, .navbar-right li a
+    {
+        font-size: 1.05em;
+    }
+
+    /*Website logo*/
+    .logo-container a p
+    {
+        font-size: 1.3125em;
+    }
+
+    /*----Home Page----*/
+    /*Change the padding of the four circles session*/
+    .circle-nav-wrapper
+    {
+        padding:0 10px;
+    }
+
+    /*----Barriers Page----*/
+    /*Change flexbox direction to enable the vertical layout*/
+    .issues-content-container
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 20px;
+    }
+
+    .issues-text
+    {
+        margin: 5px 0 10px 0;
+    }
+
+    /*Cancel the margin preciously for vertical layout*/
+    .issue-image
+    {
+        margin-right: 0px;
+        width: 200px;
+        height: 200px;
+        min-height: 200px;
+        min-width: 200px;
+
+    }
+
+    /*Center text after changing layout*/
+    .issues-title
+    {
+        text-align: center;
+    }
+
+    /*Center the image after changing layout*/
+    .issues-image-container
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*----Share Your Voice Page----*/
+    /*Cancel flex layout for vertical layout*/
+    .user-container
+    {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .user-image-box
+    {
+        margin-bottom: 10px;
+    }
+
+    /*No need for left/right margin any longer*/
+    .user-text, .user-text-2, .user-text-4
+    {
+        margin: 0;
+    }
+}
+
+/*-----Breaking Point 4-----*/
+@media (max-width: 500px)
+{
+    /*----Home page----*/
+    /*Four navigation circles are layed vertically*/
+    .circle-nav-wrapper
+    {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/*-----Breaking Point 5-----*/
+@media (max-width: 430px)
+{
+    /*Breaking Point 5: Common Part*/
+    /*phone version so reduce the padding for more space*/
+    .max-width
+    {
+        padding: 0 40px;
+    }
+ 
+    .about-section, .importance-title, .importance-first-paragraph, .importance-second-paragraph, 
+    .share-text-container
+    {
+        padding: 0 10px;
+    }
+}
+
+/*-----Breaking Point 6*-----*/
+@media (max-width: 300px)
+{
+    .max-width
+    {
+        padding: 0 20px;
+    }
+
+    /*----How You Can Help Page*----*/
+    .share-image-container img
+    {
+        width: 200px;
+        height: 200px;
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    .way-container img
+    {
+        width: 240px;
+        height: 160px;
+        min-width: 240px;
+        min-height: 160px;
+    }
+}
+
+
+
+

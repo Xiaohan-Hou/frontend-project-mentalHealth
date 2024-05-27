@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Xiaohan Hou"/>
+    <meta name="description" content="Website built for an imaginary organization who advocates for psychotherapy"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="toggle.js"></script>
+    <title>Share Your Voice</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <div class="max-width">
+            <!--Logo Container Section-->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="Img/Header/Header_Logo.png" class="logo-image" alt="Organization logo">
+                    <p>Make Therapy Accessible</p>
+                </a>
+            </div>
+
+            <!--Nav Bar in the Right-->
+            <ul class="navbar-right">
+                <li><a href="index.html" id="home-nav-right">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="importance.html">Importance</a></li>
+                <li><a href="barriers.html">Barriers</a></li>
+                <li><a href="help.html" class="current">How to Help</a></li>
+            </ul>
+
+            <!--The icon (Hidden until the screen size changes)-->
+            <div class="menu-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="max-width">
+
+            <!--Share your voice title-->
+            <h1 class="page-title">Share Your Voice</h1>
+
+            <!--Share you voice intro-->
+            <p class="page-intro-text">Share your experience and challenges accessing therapy, or general experience of mental health, as many others have done! Your voice will help with the advocacy which helps make therapy more accessible to everyone.
+            </p>
+
+            <div id="voice-master-container">
+
+                <!--Left Box: Information Form-->
+                <form class="voice-left-container">
+                    <!--Left Title-->
+                    <h3 class="voice-title">Information Form</h3>
+
+                    <!--First Name-->
+                    <div class="input-content">
+                        <label>First Name:</label>
+                        <input type="text">
+                    </div>
+
+                    <!--Last Name-->
+                    <div class="input-content">
+                        <label>Last Name:</label>
+                        <input type="text">
+                    </div>
+
+                    <!--Email Name-->
+                    <div class="input-content">
+                        <label>Email:</label>
+                        <input type="text">
+                    </div>
+
+                    <!--Experience-->
+                    <div class="input-content">
+                        <label>Your Experience:</label>
+                        <textarea></textarea>
+                    </div>
+
+                    <!--Submission Button-->
+                    <div class="submit-button">
+                        <input type="submit" id="sub-button">
+                    </div>
+
+                    <!--Disclaimer Clause-->
+                    <p id="confidentiality-text">
+                        *Note: After receiving your message, we will send you a confirmation email and an agreement to make sure you are comfortable
+                        sharing your experience. By clicking the submit button, you consent to sharing the information with us, but
+                        the information you shared will be kept completely confidential until we double-check with you.
+                    </p>
+                </form>
+
+                <!--Right Box: Demo-->
+                <div class="voice-right-container">
+                    <!--Title-->
+                    <h3 class="voice-title">What Others Had Said</h3>
+
+                    <!--Flex Container for all the shares-->
+                    <div class="user-flex-container">
+                        <!--Share 1-->
+                        <div class="user-container">
+                            <div class="user-image-box"><img src="Img/experience/anonymous.png" alt="User's head shot">
+                            </div>
+                            <p class="user-text">
+                                "My insurance only covers 80% of psychotherapist visits. It sounds like a lot, but sometimes I still 
+                                have to pay around 80$ out of pocket for each session."
+                            </p>
+                        </div>
+
+                        <!--Share 2-->
+                        <div class="user-container user-container-2">
+                            <div class="user-image-box"><img src="Img/experience/user1.png" alt="User's head shot">
+                            </div>
+                            <p class="user-text user-text-2">
+                                "I do not actually click with my current therapist. However, I'm not sure how long I am going to wait
+                                if I decide to switch."
+                            </p>
+                        </div>
+
+                        <!--Share 3-->
+                        <div class="user-container">
+                            <div class="user-image-box"><img src="Img/experience/anonymous.png" alt="User's head shot">
+                            </div>
+                            <p class="user-text">
+                                "I need long-term therapy for my childhood trauma, but I am currently unemployed and don't have any insurance benefits."
+                            </p>
+                        </div>
+
+                        <!--Share 4-->
+                        <div class="user-container user-container-4">
+                            <div class="user-image-box"><img src="Img/experience/user2.png" alt="User's head shot">
+                            </div>
+                            <p class="user-text user-text-4">
+                                "I am a little scared to seek a therapist. In my culture, mental health is not something that we usually put on the table. 
+                                I don't know how my friends and family members will react."
+                            </p>
+                        </div>
+
+                        <!--Share 5-->
+                        <div class="user-container">
+                            <div class="user-image-box"><img src="Img/experience/anonymous.png" alt="User's head shot">
+                            </div>
+                            <p class="user-text">
+                                "I am too busy with work and taking care of my family this week and I have to cancel my therapy session second in a row."
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Bottom navigation section-->
+            <section class="bottom-nav">
+                <a class="nav-link" href="index.html">Go back to home page</a>
+            </section>
+
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Copyright&copyXiaohan Hou 2022</p>
+            <p class="disclaimer">*This website is a portfolio demo. The organization is fictitious.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
